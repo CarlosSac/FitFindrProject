@@ -40,7 +40,7 @@ Searches the mock listings dataset for secondhand items matching the user's desc
 - **size:** optional size string. Handles five formats: letter/range sizes (`S`, `M/L`) via token split; waist sizes (`W30`, `W30 L30`) via prefix match; US shoe sizes (`US 8`) via exact match; One Size variants always pass.
 - **max_price:** optional price ceiling (inclusive). Listings above this are dropped before scoring.
 
-Returns a list of listing dicts sorted by relevance score (highest first). Each dict contains: `id`, `title`, `description`, `category`, `style_tags` (list), `size`, `condition` (excellent / good / fair), `price` (float), `colors` (list), `brand` (str or None), and `platform` (depop / thredUp / poshmark). Returns an empty list if nothing matches — never raises.
+Returns a list of listing dicts sorted by relevance score (highest first). Each dict contains: `id`, `title`, `description`, `category`, `style_tags` (list), `size`, `condition` (excellent / good / fair), `price` (float), `colors` (list), `brand` (str or None), and `platform` (depop / thredUp / poshmark). Returns an empty list if nothing matches, it never raises an exception.
 
 ---
 
